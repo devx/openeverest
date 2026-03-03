@@ -41,6 +41,8 @@ const (
 	PSMDBOperatorName = "psmdb-operator"
 	// PGOperatorName is the name of the PG operator in the version service.
 	PGOperatorName = "pg-operator"
+	// KafkaOperatorName is the name of the Kafka operator in the version service.
+	KafkaOperatorName = "kafka-operator"
 )
 
 // EngineTypeToOperatorName maps an engine type to the operator name in the version service.
@@ -50,6 +52,7 @@ var EngineTypeToOperatorName = map[everestv1alpha1.EngineType]string{
 	everestv1alpha1.DatabaseEnginePXC:        PXCOperatorName,
 	everestv1alpha1.DatabaseEnginePSMDB:      PSMDBOperatorName,
 	everestv1alpha1.DatabaseEnginePostgresql: PGOperatorName,
+	everestv1alpha1.EngineType("kafka"):      KafkaOperatorName,
 }
 
 // Interface is the interface for the version service client.
